@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt Manager - Schnupperlehre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>📱 Kontakt Manager</h1>
+        <p>Verwalte deine Kontakte einfach und modern</p>
+    </div>
+
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div class="status-count" id="contactCount">0 Kontakte gespeichert</div>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <div class="main-content">
+        <!-- Formular Sektion -->
+        <div class="form-section">
+            <h2>✨ Neuer Kontakt</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="z.B. Max Mustermann">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail *</label>
+                    <input type="email" id="email" name="email" required placeholder="z.B. max@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" id="phone" name="phone" placeholder="z.B. 079 123 45 67">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Firma</label>
+                    <input type="text" id="company" name="company" placeholder="z.B. TechFirma AG">
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    Kontakt hinzufügen
+                </button>
+            </form>
+        </div>
+
+        <!-- Kontakte Sektion -->
+        <div class="contacts-section">
+            <h2>👥 Meine Kontakte</h2>
+
+            <input type="text" class="search-box" id="searchBox" placeholder="🔍 Kontakte durchsuchen...">
+
+            <div id="contactsList">
+                <!-- Hier werden die Kontakte dynamisch eingefügt -->
+
+                <!-- Leerer Zustand (wird per JavaScript ein/ausgeblendet) -->
+                <div class="empty-state" id="emptyState">
+                    <div style="font-size: 4rem; margin-bottom: 20px;">📭</div>
+                    <h3>Noch keine Kontakte</h3>
+                    <p>Füge deinen ersten Kontakt hinzu!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript einbinden -->
+<script src="script.js"></script>
+</body>
+</html>
